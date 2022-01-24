@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Marck Script', cursive;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+/*
+.wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(231, 255, 253, 0.3);
+    z-index: 1;
+}
+*/
+.header {
+    height: 50px;
+    position: fixed;
+    background-color: rgba(25, 74, 115, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+
+.header:hover {
+    opacity: 1;
+    background-color: #f82137;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav__item {
+    color: white;
+    text-decoration: none;
+}
+
+.section {
+    height: 100vh;
+}
+
+.main {
+    background-image: url(img/rabstol_net_new_year_139.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    width: 75%;
+    margin-bottom: 40px;
+}
+
+.about__avatar {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.about__avatar:hover {
+    transform: rotate(45deg);
+}
+
+.about__img {
+    height: 100%;
+}
+
+.about__info {
+    background-color: rgba(25, 74, 115, 0.9);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    border: 5px solid white;
+}
+
+@keyframes title-run {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+        color: red;
+    }
+}
+
+.about__title {
+    font-size: 50px;
+    margin: 0;
+    animation: title-run 1s infinite alternate;
+}
+
+.about__text {
+    font-size: 20px;
+}
+
+.button {
+    z-index: 10;
+    position: relative;
+    background-color: #d42726;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px #a01313;
+}
+
+.compliment {
+    background-image: url(img/Noviy-God-2048x1152.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.compliment__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.compliment__img-wrap {
+    height: 40%;
+    position: relative;
+}
+
+.compliment__img {
+    height: 100%;
+}
+
+.compliment__img-talk {
+    position: absolute;
+    top: 50%;
+    left: -15%;
+}
+
+.poem {
+    background-image: url(img/Christmas-Present-JAyJ-2048x1152-MM-100.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.poem__title {
+    text-align: center;
+}
+
+.poem__list {
+    display: flex;
+    justify-content: center;
+}
+
+.poem__item {
+    width: 300px;
+    min-height: 580px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f5f5dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.poem__img-wrap {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.poem__img {
+    height: 100%;
+}
+
+.msg {
+    background-image: url(img/noviy-god100.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.msg__title {
+    margin-bottom: 68px;
+}
+
+.form-msg {
+    width: 600px;
+    background-image: url(img/noviy-god.jpg);
+    background-position: right top;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 40px 40px 65px;
+    position: relative;
+}
+
+.form-msg__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-msg__row {
+    margin-bottom: 10px;
+}
+
+.form-msg__title-input {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-msg__input,
+.form-msg__message {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+.form-msg__message {
+    height: 200px;
+    resize: none;
+}
+
+.form-msg__button-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-msg__submit {
+    background-color: #f82137;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-msg__img-wrap {
+    height: 200px;
+    position: absolute;
+    top: -157px;
+    right: 0;
+}
+
+.form-msg__img {
+    height: 100%;
+}
